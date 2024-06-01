@@ -5,9 +5,6 @@ import {
 } from "@empirica/core/player/classic/react";
 import { Loading } from "@empirica/core/player/react";
 import React from "react";
-import { JellyBeans } from "./examples/JellyBeans";
-import { MineSweeper } from "./examples/MineSweeper";
-
 export function Stage() {
   const player = usePlayer();
   const players = usePlayers();
@@ -25,12 +22,8 @@ export function Stage() {
     );
   }
 
-  switch (round.get("task")) {
-    case "jellybeans":
-      return <JellyBeans />;
-    case "minesweeper":
-      return <MineSweeper />;
-    default:
-      return <div>Unknown task</div>;
-  }
+  return(
+      <p>Nothing here to see bruh</p>
+  );
+
 }
