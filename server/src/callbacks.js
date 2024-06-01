@@ -1,7 +1,11 @@
 import { ClassicListenersCollector } from "@empirica/core/admin/classic";
 export const Empirica = new ClassicListenersCollector();
 
-Empirica.onGameStart(({ game }) => {});
+Empirica.onGameStart(({ game }) => {
+  const round = game.addRound({name: `Round`,});
+  round.addStage({name: "choice", duration: 10000});
+  round.addStage({name: "result", duration: 10000});
+});
 
 Empirica.onRoundStart(({ round }) => {});
 
