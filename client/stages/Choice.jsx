@@ -10,7 +10,7 @@ export function Choice() {
 
   function onClick (choice) {
     console.log(`Your choice: ${choice}`)
-    player.round.set("decision", playerChoice);
+    player.round.set("decision", choice);
     player.stage.set("submit", true);
   };
 
