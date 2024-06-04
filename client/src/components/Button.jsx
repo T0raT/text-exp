@@ -1,4 +1,6 @@
 import React from "react";
+import {Button as ReactButton} from "react-bootstrap";
+
 
 const base =
   "inline-flex items-center px-4 py-2 border text-sm font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-empirica-500";
@@ -16,13 +18,13 @@ export function Button({
   autoFocus = false,
 }) {
   return (
-    <button
+    <ReactButton
       type={type}
       onClick={handleClick}
       className={`${base} ${primary ? prim : sec} ${className}`}
       autoFocus={autoFocus}
     >
       {children}
-    </button>
+    </ReactButton>
   );
 }
